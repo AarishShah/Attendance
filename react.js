@@ -18,7 +18,7 @@ class attendance {
         if (a1.Argument_verifier() == 1) {
             exit; // The program would terminate if invalid arguments are inputted
         } else {
-            document.querySelector(".text3").innerHTML = "Current attendance: " + (a1.get_Attendance_ratio() * 100).toFixed(3) + "%";
+            document.querySelector(".text3").innerHTML = "Current attendance: " + (a1.get_Attendance_ratio() * 100).toFixed(2) + "%";
         }
     }
 
@@ -59,12 +59,12 @@ class attendance {
                 i // To fix grammatical errors. Case 1 is for Sinlugar & Case 2 is for Plural.
                 ) {
                     case 1: // Test Case(rare case): 75/8/11
-                        document.querySelector(".text2").innerHTML = "You need to attend " + i + " more class to get attendance of " + (((i + this.Classes_attended) / (i + this.Total_classes_held)) * 100).toFixed(3) + "%.";
+                        document.querySelector(".text2").innerHTML = "You need to attend " + i + " more class to get attendance of " + (((i + this.Classes_attended) / (i + this.Total_classes_held)) * 100).toFixed(2) + "%.";
                         trigger = 10;
                         break;
 
                     default: // Test Case(normal case): 75/5/10
-                        document.querySelector(".text2").innerHTML = "You need to attend " + i + " more classes to get attendance above " + this.Criteria * 100 + "%, after which your attendace will be: " + (((i + this.Classes_attended) / (i + this.Total_classes_held)) * 100).toFixed(3) + "%.";
+                        document.querySelector(".text2").innerHTML = "You need to attend " + i + " more classes to get attendance above " + this.Criteria * 100 + "%, after which your attendace will be: " + (((i + this.Classes_attended) / (i + this.Total_classes_held)) * 100).toFixed(2) + "%.";
                         trigger = 10;
                         break;
                 }
@@ -92,15 +92,15 @@ class attendance {
                 if (i - 1 == 0) {
                     // has more than required attendace but skipping even one class would result in shortage.
                     document.querySelector(".text2").innerHTML =
-                        "You may skip no classes. If you skip a class your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + 1)) * 100).toFixed(3) + "%."; // Test Case: 75/8/10
+                        "You may skip no classes. If you skip a class your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + 1)) * 100).toFixed(2) + "%."; // Test Case: 75/8/10
                 } else {
-                    document.querySelector(".text2").innerHTML = "You can skip " + (i - 1) + " classes. After skipping your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + (i - 1))) * 100).toFixed(3) + "%"; // Test Case(normal case): 75/10/11
+                    document.querySelector(".text2").innerHTML = "You can skip " + (i - 1) + " classes. After skipping your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + (i - 1))) * 100).toFixed(2) + "%"; // Test Case(normal case): 75/10/11
                 }
                 break;
             } else if (variable_attendance_ratio == this.Criteria) {
                 if (i == 0) {
                     // when no classes can be skipped as attendace is equal to criteria
-                    document.querySelector(".text2").innerHTML = "Your attendace is exactly " + this.Criteria * 100 + "% and hence you may skip no classes. If you skip a class your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + 1)) * 100).toFixed(3) + "%"; // Test Case: 75/6/8
+                    document.querySelector(".text2").innerHTML = "Your attendace is exactly " + this.Criteria * 100 + "% and hence you may skip no classes. If you skip a class your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + 1)) * 100).toFixed(2) + "%"; // Test Case: 75/6/8
                 } // when the loop eventually reaches value exactly equal to criteria
                 else {
                     document.querySelector(".text2").innerHTML = "After skipping " + i + " classes your attendance will be " + this.Criteria * 100 + "%."; // Test Case: 75/6/7
@@ -124,4 +124,21 @@ $("button").click(function () {
 
     a1.get_Attendance_percentage();
     a1.selector();
+});
+
+document.addEventListener("keydown", function (event) {
+    if (event.key == "Enter") {
+        var value_3 = document.getElementById("criteria").value;
+        var value_1 = document.getElementById("classes").value;
+        var value_2 = document.getElementById("total").value;
+
+        a1 = new attendance(
+            parseFloat(value_3),
+            parseFloat(value_1),
+            parseFloat(value_2)
+        );
+
+        a1.get_Attendance_percentage();
+        a1.selector();
+    }
 });
