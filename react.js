@@ -55,9 +55,8 @@ class attendance {
             n++;
 
             if (variable_attendance_ratio >= this.Criteria) {
-                switch (
-                i // To fix grammatical errors. Case 1 is for Sinlugar & Case 2 is for Plural.
-                ) {
+                switch (i) // To fix grammatical errors. Case 1 is for Sinlugar & Case 2 is for Plural.
+                {
                     case 1: // Test Case(rare case): 75/8/11
                         document.querySelector(".text2").innerHTML = "You need to attend " + i + " more class to get attendance of " + (((i + this.Classes_attended) / (i + this.Total_classes_held)) * 100).toFixed(2) + "%.";
                         trigger = 10;
@@ -94,7 +93,15 @@ class attendance {
                     document.querySelector(".text2").innerHTML =
                         "You may skip no classes. If you skip a class your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + 1)) * 100).toFixed(2) + "%."; // Test Case: 75/8/10
                 } else {
-                    document.querySelector(".text2").innerHTML = "You can skip " + (i - 1) + " classes. After skipping your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + (i - 1))) * 100).toFixed(2) + "%"; // Test Case(normal case): 75/10/11
+                    switch (i - 1) {
+                        case 1:
+                            document.querySelector(".text2").innerHTML = "You could skip " + (i - 1) + " class. After skipping " + (i - 1) + " your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + (i - 1))) * 100).toFixed(2) + "%"; // Test Case(normal case): 75/8.4/10
+                            break;
+                        default:
+                            document.querySelector(".text2").innerHTML = "You could skip " + (i - 1) + " classes. After skipping " + (i - 1) + " your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + (i - 1))) * 100).toFixed(2) + "%"; // Test Case(normal case): 75/10/11
+                            break;
+                    }
+
                 }
                 break;
             } else if (variable_attendance_ratio == this.Criteria) {
