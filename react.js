@@ -95,10 +95,10 @@ class attendance {
                 } else {
                     switch (i - 1) {
                         case 1:
-                            document.querySelector(".text2").innerHTML = "You could skip " + (i - 1) + " class. After skipping " + (i - 1) + " your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + (i - 1))) * 100).toFixed(2) + "%"; // Test Case(normal case): 75/8.4/10
+                            document.querySelector(".text2").innerHTML = "You could skip " + (i - 1) + " class. After skipping " + (i - 1) + " class your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + (i - 1))) * 100).toFixed(2) + "%"; // Test Case(normal case): 75/8.4/10
                             break;
                         default:
-                            document.querySelector(".text2").innerHTML = "You could skip " + (i - 1) + " classes. After skipping " + (i - 1) + " your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + (i - 1))) * 100).toFixed(2) + "%"; // Test Case(normal case): 75/10/11
+                            document.querySelector(".text2").innerHTML = "You could skip " + (i - 1) + " classes. After skipping " + (i - 1) + " classes your attendance will be: " + ((this.Classes_attended / (this.Total_classes_held + (i - 1))) * 100).toFixed(2) + "%"; // Test Case(normal case): 75/10/11
                             break;
                     }
 
