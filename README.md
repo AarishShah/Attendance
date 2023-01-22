@@ -1,4 +1,3 @@
-# Project-Attendance:
-https://aarishshah.github.io/Project-Attendance/
+# Project-Attendance
 
-http://c--o.de/-/attendance/
+https://c--o.de/-/attendance/
