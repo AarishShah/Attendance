@@ -7,7 +7,7 @@
  - the max number of days ***one can skip and still not fall below*** minimum
    required attendance
 
-> **Note:** Minimum required attendance by **default is 75%**. It can be changed as per the requirement.
+> **Note:** Minimum required attendance by **default is set to 75%**. It can be changed as per the requirement.
 
 ## Developers
 
