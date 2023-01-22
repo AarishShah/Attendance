@@ -4,7 +4,7 @@
 
  - the number of days one ***needs to attend*** to get minimum required
    attendance
- - the max number of days ***one can skip and still not fall below*** minimum
+ - the maximum number of days ***one can skip and still not fall below*** minimum
    required attendance
 
 > **Note:** Minimum required attendance by **default is set to 75%**. It can be changed as per the requirement.
