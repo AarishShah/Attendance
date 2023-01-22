@@ -1,4 +1,3 @@
 # Project-Attendance:
-https://aarishshah.github.io/Project-Attendance/
 
-http://c--o.de/-/attendance/
+https://hassanqari9.github.io/Attendance-calculator-website/
