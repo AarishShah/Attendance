@@ -17,4 +17,4 @@
 # Links of this tool
 
  - [Actual Website](https://c--o.de/-/attendance/)
- - [GitHub Repository](https://aarishshah.github.io/Project-Attendance/)
+ - [GitHub Repository Website](https://aarishshah.github.io/Project-Attendance/)
