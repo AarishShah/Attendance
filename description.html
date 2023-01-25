@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p> Normally attendance could be calculated using this formula </p>
+    <hr>
+    <p>(Classes Attended / Total Classes Held) * 100</p>
+    <hr>
+    <p>However, students need this value for two purposes</p>
+
+    <ul>
+        <li>to calculate how many days must they attend to get their attendance upto minimum required percentage</li>
+        <li>to know how many days could be skipped and still not fall below minimum required percentage</li>
+    </ul>
+
+
+    <hr>
+
+
+    <p>Example </p>
+
+    <p>If a student has attended 5 classes out of 10, the attendance would be 50% but a student is usualy more
+        interested in knowing how many more days must be attended to get the minimum required value set by the
+        institution. </p>
+
+    <p>Assume 75% is the minimum required attendance then to calculate how many more days a studemt must attend, we made
+        this calculator.</p>
+
+    <p>
+        It would be incorrect to evaluate in this manner <br>
+        <hr>
+        8 / 10 * 100 = 80% <br>
+
+        8 - 5 = 3 days
+        <hr>
+    </p>
+
+    <p> The correct method would be to increment both classes attended and total classes held until 75% is reached. If
+        you do it manually it would look like this: </p>
+
+    (5 / 10) * 100 = 50 <br>
+    (6 / 11) * 100 = 54.5 <br>
+    (7 / 12) * 100 = 58.3 <br>
+    (8 / 13) * 100 = 61.5 <br>
+    (9 / 14) * 100 = 64.2 <br>
+    (10 / 15) * 100 = 66.66 <br>
+    (11 / 16) * 100 = 68.75 <br>
+    (12 / 17) * 100 = 70.5 <br>
+    (13 / 18) * 100 = 72.2 <br>
+    (14 / 19) * 100 = 73.68 <br>
+    (15 / 20) * 100 = 75 <br>
+
+    <p>thus a student needs to attend 10 classes in order to get 75%.</p>
+
+
+</body>
+
+</html>
