@@ -120,8 +120,8 @@ class attendance {
                 } else {
                     document.querySelector(".text2").innerHTML =
                         "You can skip " +
-                        (i - 1) +
-                        " classes. After skipping your attendance will be: " +
+                        (i - 1) + // TODO #11: Fix Grammar
+                        " classes. After that your attendance will be: " +
                         (this.Classes_attended / (this.Total_classes_held + (i - 1))) *
                         100 +
                         "%"; // Test Case(normal case): 75/10/11
@@ -140,7 +140,7 @@ class attendance {
                 else {
                     document.querySelector(".text2").innerHTML =
                         "After skipping " +
-                        i +
+                        i + // todo #12 fix grammar
                         " classes your attendance will be " +
                         this.Criteria * 100 +
                         "%."; // Test Case: 75/6/7
