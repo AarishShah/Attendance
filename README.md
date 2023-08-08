@@ -11,7 +11,7 @@
 
 ## Developers
 
- - [Syed Aarish Shah](https://twitter.com/syedaarishshah)
+ - [Syed Aarish Shah]([https://twitter.com/syedaarishshah](https://www.linkedin.com/in/syed-aarish-shah-6a4811249/))
  - [Hasaan Qari](https://www.linkedin.com/in/hasaan-qari-b33809202/)
 
 # Links of this tool
